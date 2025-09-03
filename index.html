@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste seu código HTML</title>
+    <style>
+        body {
+            background-color: #fcf8e3;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h3 {
+            font-weight: normal;
+        }
+        textarea {
+            width: 800px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        input[type="submit"]:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Teste seu código HTML</h3>
+        <form id="testForm">
+            <textarea name="codigo" id="htmlCode"><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Teste</title>
+</head>
+<body>
+
+    <h1>Página HTML de Teste</h1>
+    
+    <p>Escreva seu código HTML aqui.</p>
+
+    <script>
+        // Escreva seu código JavaScript aqui.
+    </script>
+
+</body>
+</html></textarea>
+            <br>
+            <input type="submit" value="Testar código">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            var code = document.getElementById('htmlCode').value;
+            var newWindow = window.open();
+            newWindow.document.write(code);
+            newWindow.document.close();
+        });
+    </script>
+
+</body>
+</html>
