@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste seu código HTML</title>
+    <title>Teste HTML</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Dex6354/TesteHTML/main/icon.png">
     <style>
         body {
@@ -12,33 +12,37 @@
             color: #f4f4f4;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
         }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 15px;
-            background-color: white;
-            padding: 5px;
-        }
         .container {
             width: 100%;
             max-width: 800px;
             text-align: center;
-            background-color: #1c1c1e;
+            background-color: black;
             padding: 20px;
             border-radius: 10px;
         }
-        h3 {
-            font-weight: normal;
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .header-image {
+            width: 65px;
+            height: 65px;
+            border-radius: 15px;
+            background-color: white;
+            padding: 5px;
+            margin-right: 15px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
         }
         textarea {
             width: 100%;
@@ -82,17 +86,16 @@
 </head>
 <body>
 
-    <header>
-        <img src="https://raw.githubusercontent.com/Dex6354/TesteHTML/main/icon.png" alt="Icon" class="header-image">
-    </header>
-
     <div class="container">
-        <h3>Teste seu código HTML</h3>
+        <div class="header-content">
+            <img src="https://raw.githubusercontent.com/Dex6354/TesteHTML/main/icon.png" alt="Icon" class="header-image">
+            <h1>Teste HTML</h1>
+        </div>
         <form id="testForm">
             <textarea name="codigo" id="htmlCode" placeholder="Cole seu código HTML aqui..."></textarea>
             <div class="buttons-container">
-                <input type="submit" value="Testar código">
                 <button type="button" id="pasteButton">Colar Código</button>
+                <input type="submit" value="Testar código">
             </div>
         </form>
     </div>
